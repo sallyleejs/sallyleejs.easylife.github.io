@@ -1,0 +1,156 @@
+<!DOCTYPE html><!--22061092 이정수-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+
+    body{
+      background-image:url("./midimg./bg_1.png");
+      background-repeat:no-repeat;
+      background-position: center top;
+      background-size: 100%;
+      background-color: #e7b2ca;
+    }
+    h2{
+      text-align:center;
+    }
+    h3{
+      text-align:center;
+      margin-top:130px;
+      width:100%
+    }
+    .news{
+      margin-top:300px;
+    }
+    .footer{
+      padding:20px;
+      text-align: center;
+      background: #e7b2ca;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    input[id="menuicon"]{
+      display: none;
+    }
+    input[id="menuicon"] + label{
+      display:block;
+      margin: 30px;
+      width: 58px;
+      height: 45px;
+      position: fixed;
+      right: 0;
+      top:calc(50%-25px);
+      transition: all .35s;
+      cursor:pointer;
+    }
+    input[id="menuicon"]:checked + label{
+      z-index:2;
+      right:300px;
+    }
+    input[id="menuicon"] + label span{
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      border-radius: 30px;
+      background: #000;
+      transition: all .35s;
+    }
+    input[id="menuicon"] + label span:nth-child(1){
+      top: 0;
+    }
+    input[id="menuicon"] + label span:nth-child(2){
+      top: 50%;
+      transform:translateY(-50%);
+      /*style top: calc(50%-2.5px);
+      margin-top:-2.5px;*/
+    }
+    input[id="menuicon"] + label span:nth-child(3){
+      bottom:0;
+    }
+
+
+    input[id="menuicon"]:checked + label span:nth-child(1){
+      top: 50%;
+      transform:translateY(-50%) rotate(45deg);
+    }
+    input[id="menuicon"]:checked + label span:nth-child(2){
+      opacity:0;
+    }
+    input[id="menuicon"]:checked + label span:nth-child(3){
+      bottom:50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+
+
+    div[class="sidebar"]{
+      width:300px;
+      height:100%;
+      background:#222;
+      position:fixed;
+      top:0;
+      right:-300px;
+      z-index:1;
+      transition: all .35s;
+    }
+    input[id="menuicon"]:checked + label + div{
+      right:0;
+    }
+
+
+
+    li{
+      list-style-type: none;
+      color:#fff;
+      margin:15px;
+      border: none;
+      padding:15px;
+      font-size: 17px;
+      font-family: "Apple SD 산돌고딕 Neo";
+
+    }
+    ul li a:hover{
+      background-color: #fff;
+      color: black;
+    }
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+
+
+
+    </style>
+  <body>
+
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="sidebar">
+      <ul>
+       <li><a href="about_el.html">ABOUT EASY LIFE</a></li>
+       <li><a href="albums.html">ALBUMS</a></li>
+       <li><a href="gallery.html">VIDEO</a></li>
+       <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    <h2><a href="#"><img src="./midimg./logo.png" height="150px"></a></h2>
+    <h3><img src="./midimg./news.png" height="500px"> </h3>
+<br><br><br><br><br>
+    <div class="footer">
+      <h4>copyright&copy;Lee jung soo All right reserved</h4>
+    </div>
+
+
+
+
+
+  </body>
+</html>

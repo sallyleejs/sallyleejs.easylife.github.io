@@ -1,0 +1,339 @@
+<!DOCTYPE html><!--22061092 이정수-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body{
+        background-color: #f4cedf;
+        font-family: "Apple SD 산돌고딕 Neo";
+        color:#fff;
+
+      }
+      .footer{
+        padding:20px;
+        text-align: center;
+        background: #fed4e7;
+        margin-top: 10px;
+        color: #fff;
+      }
+      .top{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        padding: 12px 15px 12px 15px;
+        border-radius: 50px;
+      }
+      .top:hover{
+        background-color: #fff;
+      }
+
+      input[id="menuicon"]{
+        display: none;
+      }
+      input[id="menuicon"] + label{
+        display:block;
+        margin: 30px;
+        width: 58px;
+        height: 45px;
+        position: fixed;
+        right: 0;
+        top:calc(50%-25px);
+        transition: all .35s;
+        cursor:pointer;
+      }
+      input[id="menuicon"]:checked + label{
+        z-index:2;
+        right:300px;
+      }
+      input[id="menuicon"] + label span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        border-radius: 30px;
+        background: #000;
+        transition: all .35s;
+      }
+      input[id="menuicon"] + label span:nth-child(1){
+        top: 0;
+      }
+      input[id="menuicon"] + label span:nth-child(2){
+        top: 50%;
+        transform:translateY(-50%);
+        /*style top: calc(50%-2.5px);
+        margin-top:-2.5px;*/
+      }
+      input[id="menuicon"] + label span:nth-child(3){
+        bottom:0;
+      }
+
+
+      input[id="menuicon"]:checked + label span:nth-child(1){
+        top: 50%;
+        transform:translateY(-50%) rotate(45deg);
+      }
+      input[id="menuicon"]:checked + label span:nth-child(2){
+        opacity:0;
+      }
+      input[id="menuicon"]:checked + label span:nth-child(3){
+        bottom:50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+
+
+      div[class="sidebar"]{
+        width:300px;
+        height:100%;
+        background:#222;
+        position:fixed;
+        top:0;
+        right:-300px;
+        z-index:1;
+        transition: all .35s;
+      }
+      input[id="menuicon"]:checked + label + div{
+        right:0;
+      }
+
+      li{
+        list-style-type: none;
+        color:#fff;
+        margin:15px;
+        border: none;
+        padding:15px;
+        font-size: 17px;
+        font-family: "Apple SD 산돌고딕 Neo";
+
+      }
+      ul li a:hover{
+        background-color: #fff;
+        color: black;
+      }
+      a{
+        text-decoration: none;
+        color: #fff;
+      }
+      #sizeup{
+        font-size: 20px;
+        font-family: "Apple SD 산돌고딕 Neo";
+        font-weight:"강한볼드체";
+      }
+
+    .vertwo{
+      list-style-type: none;
+      color:#fff;
+      margin:3px;
+      border: none;
+      padding:5px;
+      font-size: 17px;
+      font-family: "Apple SD 산돌고딕 Neo";
+    }
+
+
+
+      /*logo*/
+      .topnav{
+        overflow:hidden;
+      }
+      .topnav a{
+        float:center;
+        display: block;
+        text-decoration:none;
+      }
+
+      /*테이블*/
+      table, td{
+        border:solid 5px #fff;
+      }
+      table{
+        border-collapse: collapse;
+        width:60%;
+        font-size:18px;
+        margin: auto;
+        margin-top:200px;
+        align: center;
+      }
+      tr{
+        height: 30px;
+        vertical-align: top;
+      }
+      td{
+        padding:7px;
+      }
+
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+    <div class="topnav">
+     <a href="index.html" style='float: left'><img src='./midimg./logo.png' height='80px'></a>
+
+     <input type="checkbox" id="menuicon">
+     <label for="menuicon">
+       <span></span>
+       <span></span>
+       <span></span>
+     </label>
+
+     <div class="sidebar">
+       <ul>
+        <li><a href="about_el.html">ABOUT EASY LIFE</a></li>
+        <li><a href="#">ALBUMS</a></li>
+        <li><a href="gallery.html">VIDEO</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+       </ul>
+     </div>
+     </div></div>
+
+  <table>
+    <tr>
+      <td><img src="./midimg./al_1.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Creature Habits Mixtape</li>
+        <li class="vertwo">1. 0520</li>
+        <li class="vertwo">2. Pockets</li>
+        <li><audio src="Easy Life - Pockets.mp3" autoplay controls loop></audio></li>
+        <li class="vertwo">3. Ice cream</li>
+        <li><audio src="easy life - Ice Cream .mp3" autoplay controls loop></audio></li>
+        <li class="vertwo">4. Lust</li>
+        <li class="vertwo">5. Silverado</li>
+        <li class="vertwo">6. Slow Motion</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_2.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Frank</li>
+        <li class="vertwo">1. Frank</li>
+        <li class="vertwo">2. Ojpl</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_3.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Temporary Love</li>
+        <li class="vertwo">1. Temporary Love part 01</li>
+        <li class="vertwo">2. Temporary Love part 02</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_4.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Spaceships Mixtape</li>
+        <li class="vertwo">1. Mercurry Getrograde</li>
+        <li class="vertwo">2. Sunday</li>
+        <li class="vertwo">3. Wet Weekend</li>
+        <li class="vertwo">4. Basics</li>
+        <li class="vertwo">5. Afters</li>
+        <li class="vertwo">6. Jealousy</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_5.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Houseplants</li>
+        <li class="vertwo">1. Houseplants</li>
+        <li><audio src="easy life - houseplants.mp3" autoplay controls loop></audio></li>
+        <li class="vertwo">2. Spaghetti Hoops</li>
+        <li><audio src="spaghetti hoops.mp3" autoplay controls loop></audio></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_6.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Earth</li>
+        <li><audio src="easy life - earth.mp3" autoplay controls loop></audio></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_7.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Junk Food</li>
+        <li class="vertwo">1. 7 magpies</li>
+        <li class="vertwo">2. Nice guys</li>
+        <li class="vertwo">3. Sangria</li>
+        <li><audio src="Easy Life - Sangria.mp3" autoplay controls loop></audio></li>
+        <li class="vertwo">4. Ls6</li>
+        <li class="vertwo">5. Dead Celebrities</li>
+        <li class="vertwo">6. Earth</li>
+        <li class="vertwo">7. Spiders</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_8.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">See you later maybe never</li>
+        <li class="vertwo">1. Peanut Butter</li>
+        <li><audio src="peanut butter.mp3" autoplay controls loop></audio></li>
+        <li class="vertwo">2. Petty Crime</li>
+        <li><audio src="petty crime.mp3" autoplay controls loop></audio></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_9.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Who gives a f**k? - Single</li>
+        <li class="vertwo">1. Night mares</li>
+        <li><audio src="Easy life - nightmares.mp3" autoplay controls loop></audio></li>
+        <li class="vertwo">2. Pop tarts</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="./midimg./al_10.jpg" height="400px"></td>
+      <td>
+        <ul>
+        <li id="sizeup">Daydreams</li>
+        <li><audio src="easy life - daydreams.mp3" autoplay controls loop></audio></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+      <div class="top">
+        <a href="#"><img src="./midimg./to_top.png" height="45px"></a>
+      </div>
+      <div class="footer">
+        <h4>copyright&copy;Lee jung soo All right reserved</h4>
+      </div>
+
+  </body>
+</html>

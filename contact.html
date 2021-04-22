@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+
+    body{
+      background-color: #f8f686;
+        }
+    h2{
+      text-align:center;
+    }
+    h3{
+      text-align:center;
+      margin-top:130px;
+      width:100%
+    }
+    .news{
+      margin-top:300px;
+    }
+    .footer{
+      padding:20px;
+      text-align: center;
+      background: #ffffce;
+      margin-top: 10px;
+      color: #8d8d81;
+    }
+
+    input[id="menuicon"]{
+      display: none;
+    }
+    input[id="menuicon"] + label{
+      display:block;
+      margin: 30px;
+      width: 58px;
+      height: 45px;
+      position: fixed;
+      right: 0;
+      top:calc(50%-25px);
+      transition: all .35s;
+      cursor:pointer;
+    }
+    input[id="menuicon"]:checked + label{
+      z-index:2;
+      right:300px;
+    }
+    input[id="menuicon"] + label span{
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      border-radius: 30px;
+      background: #000;
+      transition: all .35s;
+    }
+    input[id="menuicon"] + label span:nth-child(1){
+      top: 0;
+    }
+    input[id="menuicon"] + label span:nth-child(2){
+      top: 50%;
+      transform:translateY(-50%);
+      /*style top: calc(50%-2.5px);
+      margin-top:-2.5px;*/
+    }
+    input[id="menuicon"] + label span:nth-child(3){
+      bottom:0;
+    }
+
+
+    input[id="menuicon"]:checked + label span:nth-child(1){
+      top: 50%;
+      transform:translateY(-50%) rotate(45deg);
+    }
+    input[id="menuicon"]:checked + label span:nth-child(2){
+      opacity:0;
+    }
+    input[id="menuicon"]:checked + label span:nth-child(3){
+      bottom:50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+
+
+    div[class="sidebar"]{
+      width:300px;
+      height:100%;
+      background:#222;
+      position:fixed;
+      top:0;
+      right:-300px;
+      z-index:1;
+      transition: all .35s;
+    }
+    input[id="menuicon"]:checked + label + div{
+      right:0;
+    }
+
+    li{
+      list-style-type: none;
+      color:#fff;
+      margin:15px;
+      border: none;
+      padding:15px;
+      font-size: 17px;
+      font-family: "Apple SD 산돌고딕 Neo";
+
+    }
+    ul li a:hover{
+      background-color: #fff;
+      color: black;
+    }
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+
+    h2{
+        text-shadow: 2px 2px 5px #80814d;
+    }
+    /*logo*/
+    .topnav{
+      overflow:hidden;
+    }
+    .topnav a{
+      float:center;
+      display: block;
+      text-decoration:none;
+    }
+
+
+    </style>
+  <body>
+    <div class="header">
+    <div class="topnav">
+     <a href="index.html" style='float: left'><img src='./midimg./logo.png' height='90px'></a>
+
+
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="sidebar">
+      <ul>
+       <li><a href="about_el.html">ABOUT EASY LIFE</a></li>
+       <li><a href="albums.html">ALBUMS</a></li>
+       <li><a href="gallery.html">VIDEO</a></li>
+       <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+    </div></div>
+    <br>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2>
+      <a href="https://www.easylifemusic.com"><img src="./midimg./b_official.png" height="150px"></a>
+      <a href="https://www.instagram.com/easylife/"><img src="./midimg./b_insta.png" height="150px"></a>
+      <a href="https://www.facebook.com/easypeasylemonsqueezylife/"><img src="./midimg./b_facebook.png" height="150px"></a>
+      <a href="https://www.youtube.com/channel/UCRSMQDSOBCZcU5AKwjoFAuQ"><img src="./midimg./b_youtube.png" height="150px"></a>
+      <a href="https://twitter.com/easylife"><img src="./midimg./b_tww.png" height="150px"></a>
+    </h2>
+    <h2>sign up our official site! you can receive news updates for Easy Life.</h2>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+      <h4>copyright&copy;Lee jung soo All right reserved</h4>
+    </div>
+
+
+  </body>
+</html>

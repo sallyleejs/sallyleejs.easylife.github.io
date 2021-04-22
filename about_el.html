@@ -1,0 +1,291 @@
+<!DOCTYPE html><!--22061092 이정수-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body{
+        background-color: #aad8ef;
+      }
+      /*logo*/
+      .topnav{
+        overflow:hidden;
+      }
+      .topnav a{
+        float:center;
+        display: block;
+        text-decoration:none;
+      }
+      .footer{
+        padding:20px;
+        text-align: center;
+        background: #d9eff9;
+        margin-top: 10px;
+        color: #fff;
+      }
+
+      input[id="menuicon"]{
+        display: none;
+      }
+      input[id="menuicon"] + label{
+        display:block;
+        margin: 30px;
+        width: 58px;
+        height: 45px;
+        position: fixed;
+        right: 0;
+        top:calc(50%-25px);
+        transition: all .35s;
+        cursor:pointer;
+      }
+      input[id="menuicon"]:checked + label{
+        z-index:2;
+        right:300px;
+      }
+      input[id="menuicon"] + label span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        border-radius: 30px;
+        background: #000;
+        transition: all .35s;
+      }
+      input[id="menuicon"] + label span:nth-child(1){
+        top: 0;
+      }
+      input[id="menuicon"] + label span:nth-child(2){
+        top: 50%;
+        transform:translateY(-50%);
+        /*style top: calc(50%-2.5px);
+        margin-top:-2.5px;*/
+      }
+      input[id="menuicon"] + label span:nth-child(3){
+        bottom:0;
+      }
+
+
+      input[id="menuicon"]:checked + label span:nth-child(1){
+        top: 50%;
+        transform:translateY(-50%) rotate(45deg);
+      }
+      input[id="menuicon"]:checked + label span:nth-child(2){
+        opacity:0;
+      }
+      input[id="menuicon"]:checked + label span:nth-child(3){
+        bottom:50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+
+
+      div[class="sidebar"]{
+        width:300px;
+        height:100%;
+        background:#222;
+        position:fixed;
+        top:0;
+        right:-300px;
+        z-index:1;
+        transition: all .35s;
+      }
+      input[id="menuicon"]:checked + label + div{
+        right:0;
+      }
+
+      li{
+        list-style-type: none;
+        color:#fff;
+        margin:15px;
+        border: none;
+        padding:15px;
+        font-size: 17px;
+        font-family: "Apple SD 산돌고딕 Neo";
+
+      }
+      ul li a:hover{
+        background-color: #fff;
+        color: black;
+      }
+      a{
+        text-decoration: none;
+        color: #fff;
+      }
+
+
+
+      /*logo*/
+      .topnav{
+        overflow:hidden;
+      }
+      .topnav a{
+        float:right;
+        display: block;
+        text-decoration:none;
+      }
+
+      /*테이블*/
+      table, td{
+        border:solid 5px #fff;
+      }
+      table{
+        border-collapse: collapse;
+        width:80%;
+        font-size:18px;
+        margin: auto;
+        margin-top:150px;
+        align: center;
+      }
+      tr{
+        height: 30px;
+        vertical-align: top;
+        text-align: center;
+      }
+      td{
+        padding:7px;
+      }
+      h2{
+        color:#fff;
+      }
+      h3{
+        color:#9b9b9b;
+      }
+
+
+
+
+
+      .top{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        /*padding: 12px 15px 12px 15px;*/
+        border-radius: 50px;
+      }
+      .top:hover{
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+    <div class="topnav">
+     <a href="index.html" style='float: left'><img src='./midimg./logo.png' height='90px'></a>
+
+     <input type="checkbox" id="menuicon">
+     <label for="menuicon">
+       <span></span>
+       <span></span>
+       <span></span>
+     </label>
+
+     <div class="sidebar">
+       <ul>
+        <li><a href="#">ABOUT EASY LIFE</a></li>
+        <li><a href="albums.html">ALBUMS</a></li>
+        <li><a href="gallery.html">VIDEO</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+       </ul>
+     </div>
+     </div>
+     </div>
+
+
+
+     <table>
+       <tr>
+         <td colspan="2"><h2>EASY LIFE</h2></td>
+       </tr>
+       <tr>
+         <td colspan="2"><img src='./midimg./photo_1.jpg' height='400px'></td>
+       </tr>
+       <tr>
+         <td colspan="2"><h2>2017년 11월 22일에 데뷔한 Island Records소속의 록밴드이다.
+         <br>주로 얼터너티브 R&B를 다루며, BBC sound of 2020 에서 2위를 했다.
+         <br>2020초부터 밴드 특유의 감성으로 주목받고있는 그룹이다.</h2></td>
+       </tr>
+       </table>
+       <table>
+
+       <tr>
+         <td colspan="2"><h2>MEMBERS</h2></td>
+       </tr>
+
+       <tr>
+         <td>
+          <img src='./midimg./vocal.jpg' height='300px'>
+        </td>
+        <td>
+          <h2>Murray Matravers</h2>
+          <ul>
+            <li>1995년 10월 22일생</li>
+            <li>포지션: 보컬</li>
+            <li>키가 작은것이 특징이고 쉬여운 외모가 유명하다.</li>
+          </ul>
+       </td>
+       </tr>
+
+         <tr>
+           <td>
+            <img src='./midimg./drum.jpg' height='300px'>
+          </td>
+          <td>
+            <h2>Oliver Cassidy</h2>
+            <ul>
+              <li>1998년 2월 25일생</li>
+              <li>포지션: 드럼, 타악기</li>
+            </ul>
+         </td>
+         </tr>
+
+         <tr>
+             <td>
+              <img src='./midimg./base.jpg' height='300px'>
+            </td>
+            <td>
+              <h2>Sam Hewitt</h2>
+              <ul>
+                <li>정보없음</li>
+                <li>포지션:트럼펫, 색소폰, 백보컬</li>
+                <li>수염이 아이덴티이다.</li>
+              </ul>
+           </td>
+           </tr>
+
+           <tr>
+             <td>
+              <img src='./midimg./Lewis Berry.jpg' height='300px'>
+            </td>
+            <td>
+              <h2>Lewis Berry</h2>
+              <ul>
+                <li>정보없음</li>
+                <li>포지션: 기타</li>
+                <li>잘생긴것으로 유명하다.</li>
+              </ul>
+           </td>
+           </tr>
+
+             <tr>
+               <td>
+                <img src='./midimg./Jordan Birtles.jpg' height='300px'>
+              </td>
+              <td>
+                <h2>Jordan Birtles</h2>
+                <ul>
+                  <li>1992년 12월 2일생</li>
+                  <li>포지션: 키보드,백보컬,타악기</li>
+
+                </ul>
+             </td>
+             </tr>
+
+    </table>
+
+    <div class="top">
+      <a href="#"><img src="./midimg./to_top.png" height="45px"></a>
+    </div>
+    <div class="footer">
+      <h4>copyright&copy;Lee jung soo All right reserved</h4>
+    </div>
+  </body>
+</html>
